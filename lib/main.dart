@@ -1,16 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:meals/screens/main_tabs.dart';
 
 void main() {
-  runApp(MaterialApp(home: const MyApp()));
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Text('data'),
-    );
-  }
+  runApp(
+    MaterialApp(debugShowCheckedModeBanner: false, home: const MainTabs()),
+  );
 }
