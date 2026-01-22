@@ -3,12 +3,14 @@ import 'package:meals/models/category.dart';
 
 class CategoryItem extends StatelessWidget {
   final Category category;
-  const CategoryItem({super.key, required this.category});
+  
+  final void Function() onSelectCategory;
+  const CategoryItem({super.key, required this.category, required this.onSelectCategory});
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {},
+      onTap: onSelectCategory,
       borderRadius: BorderRadius.circular(16),
       child: Container(
         padding: .all(16),
