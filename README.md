@@ -1,16 +1,46 @@
-# meals
+# 🍽️ Flutter Meals App
 
-A new Flutter project.
+A simple Flutter application that displays meal **categories** and **meals** using **predefined (dummy) data**. The app demonstrates clean UI structure, basic **animations**, and state management using **Provider**.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## ✨ Features
 
-A few resources to get you started if this is your first Flutter project:
+* 📂 Meal Categories
+* 🍔 Meals list per category
+* 📄 Meal details screen
+* ❤️ Add / remove favorite meals
+* 🔍 Filter meals (e.g. gluten‑free, vegan, etc.)
+* 🎞️ Simple animations (Hero & transitions)
+* 🧠 State management with `Provider`
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+---
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 📸 App Screenshots (Mobile)
+
+<p float="left">
+  <img src="assets/screenshots/categories.png" width="250" />
+  <img src="assets/screenshots/meals.png" width="250" />
+  <img src="assets/screenshots/meal_details.png" width="250" />
+</p>
+
+<p float="left">
+  <img src="assets/screenshots/filters.png" width="250" />
+  <img src="assets/screenshots/favorites.png" width="250" />
+</p>
+
+---
+
+## 🛠️ Built With
+
+* **Flutter**
+* **Dart**
+* **Provider** (state management)
+
+---
+
+## 📌 Notes
+
+* All meals and categories are loaded from **predefined dummy data**.
+
+---
