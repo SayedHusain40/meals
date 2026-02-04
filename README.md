@@ -22,11 +22,9 @@ A simple Flutter application that displays meal **categories** and **meals** usi
   <img src="assets/screenshots/categories.png" width="250" />
   <img src="assets/screenshots/meals.png" width="250" />
   <img src="assets/screenshots/meal_details.png" width="250" />
-</p>
-
-<p float="left">
-  <img src="assets/screenshots/filters.png" width="250" />
   <img src="assets/screenshots/favorites.png" width="250" />
+  <img src="assets/screenshots/navigation_drawer.png" width="250" />
+  <img src="assets/screenshots/filters.png" width="250" />
 </p>
 
 ---
