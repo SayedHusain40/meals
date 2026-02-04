@@ -4,16 +4,33 @@ import 'package:meals/models/meal.dart';
 import 'package:meals/screens/meals_screen.dart';
 import 'package:meals/widgets/category_item.dart';
 
-class CategoriesScreen extends StatelessWidget {
-  final List<Meal> meals;
-  const CategoriesScreen({super.key, required this.meals});
+class CategoriesScreen extends StatefulWidget {
+  final List<Meal> availableMeals;
+  const CategoriesScreen({super.key, required this.availableMeals});
+
+  @override
+  State<CategoriesScreen> createState() => _CategoriesScreenState();
+}
+
+class _CategoriesScreenState extends State<CategoriesScreen> {
+  double _topPaddingContent = 100; // start with 20
+
+  @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      setState(() {
+        _topPaddingContent = 24;
+      });
+    });
+  }
 
   void onSelectCategory(
     BuildContext context,
     String categoryID,
     String categoryName,
   ) {
-    final List<Meal> filteredMeals = meals
+    final List<Meal> filteredMeals = widget.availableMeals
         .where((meal) => meal.categories.contains(categoryID))
         .toList();
 
@@ -28,10 +45,17 @@ class CategoriesScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(24),
+    return AnimatedPadding(
+      duration: const Duration(milliseconds: 1000),
+      curve: Curves.easeOutBack,
+      padding: EdgeInsets.only(
+        top: _topPaddingContent,
+        left: 24,
+        right: 24,
+        bottom: 24,
+      ),
       child: GridView.builder(
-        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2,
           crossAxisSpacing: 20,
           mainAxisSpacing: 20,
