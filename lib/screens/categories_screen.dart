@@ -13,7 +13,7 @@ class CategoriesScreen extends StatefulWidget {
 }
 
 class _CategoriesScreenState extends State<CategoriesScreen> {
-  double _topPaddingContent = 100; // start with 20
+  double _topPaddingContent = 100; // start with 100
 
   @override
   void initState() {
